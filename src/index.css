@@ -1,0 +1,5 @@
+@import "tailwindcss";
+:root {
+  --font-primary: "Inter", sans-serif;
+  --font-brand: "Poppins", sans-serif;
+}
