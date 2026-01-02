@@ -3,32 +3,32 @@ import get_icon from "../../assets/get_started.png";
 
 const Navbar = () => {
   return (
-    <div className="h-screen w-auto flex justify-between items-center">
-      <div className="bg-amber-400 max-h-fit max-w-fit">
-        <img className="h-40 w-auto" src={collixy_logo} alt="Collixy Logo" />
-      </div>
-      <div className="h-auto w-fit flex flex-row gap-5 bg-amber-500 align-middle justify-center">
-          <div className='text-3xl text-black font-bold align-middle justify-center'>
-            <h3>About Us</h3>
-          </div>
-          <div>
-            <button className='px-13 py-4 rounded-2xl bg-[#0F2854] text-3xl text-white font-primary '>
-                Login
-            </button>
-          </div>
-          <div className='overflow-hidden flex flex-row'>
-            <button className='px-2 py- overflow-hidden flex flex-row font-bold text bg-[#0a84ff71] text-blue-700'>
-                <img src={get_icon} alt="" className='h-10 w-10'/>
-                Get started
-            </button>
-          </div>
-          <div>
-            <button>
-                toggle
-            </button>
-          </div>
-      </div>
-    </div>
+    <header className="w-screen h-fit fixed top-0 left-0 z-50 bg-white shadow-sm">
+      <nav className="h-fit bg-amber-100 flex items-center justify-between px-8 py-0">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img src={collixy_logo} alt="Collixy Logo" className="h-50 w-auto" />
+        </div>
+
+        {/* Right Menu */}
+        <div className="flex flex-col md:flex-row gap-5 items-center">
+          <h3 className="text-xl font-bold text-black cursor-pointer">
+            About Us
+          </h3>
+
+          <button className="px-6 py-2 rounded-xl bg-[#0F2854] text-white text-lg font-primary">
+            Login
+          </button>
+
+          <button className="flex items-center gap-2 px-5 py-2 rounded-xl font-primary bg-[#0a84ff3f] text-blue-700 text-lg">
+            <img src={get_icon} alt="Get started" className="h-5 w-5" />
+            <span>Get started</span>
+          </button>
+
+          <button className="text-sm font-medium">Toggle</button>
+        </div>
+      </nav>
+    </header>
   );
 };
 
