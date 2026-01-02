@@ -3,3 +3,52 @@
   --font-primary: "Inter", sans-serif;
   --font-brand: "Poppins", sans-serif;
 }
+:root {
+  /* Light theme variables */
+  --bg-primary: #EDF1FE;
+  --bg-secondary: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --button-primary: #0F2854;
+  --button-secondary: #0a84ff3f;
+  --border-color: #e0e0e0;
+}
+
+[data-theme="dark"] {
+  /* Dark theme variables */
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --button-primary: #0d47a1;
+  --button-secondary: #1e3a8a;
+  --border-color: #2d3748;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* You can use these variables throughout your app */
+.themed-bg {
+  background-color: var(--bg-primary);
+}
+
+.themed-text {
+  color: var(--text-primary);
+}
+/* Add to your global CSS file */
+@keyframes moveBackground {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(100px, 100px); }
+}
+
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
